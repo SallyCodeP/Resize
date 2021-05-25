@@ -11,14 +11,14 @@ class Applica(interface.Interface):
 
     def __init__(self):
         super().__init__()
-        self.carregar()
-        self.open_foto.clicked.connect(self.pegar_imagem)
-        self.resize_b.clicked.connect(self.resize_imagem_conect)
-        self.pode = False
-        self.pode2 = False
-        self.carregar()
         self.setWindowTitle("Resize")
         self.setFixedSize(312, 300)
+        self.carregar()
+        self.pode = False
+        self.pode2 = False
+        self.open_foto.clicked.connect(self.pegar_imagem)
+        self.resize_b.clicked.connect(self.resize_imagem_conect)
+
         
     def erro(self):
         self.label.setText("Erro!")
